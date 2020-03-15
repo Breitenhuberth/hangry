@@ -22,23 +22,6 @@
       "type": "standard"
     },
     {
-      "id": "95826e57be",
-      "name": "Rezept_Frage",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Wuensche"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-90jC41"
-      ],
-      "onReceive": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.payload.text}}\"}"
-      ],
-      "type": "standard"
-    },
-    {
       "id": "entry",
       "name": "entry",
       "next": [
@@ -62,12 +45,12 @@
         {
           "caption": "User picked [restaur...]",
           "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"restaurant\"",
-          "node": "Rezept"
+          "node": "restaurant.flow.json"
         },
         {
           "caption": "User picked [rezept]",
           "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"rezept\"",
-          "node": "restaurant.flow.json"
+          "node": "rezept.flow.json"
         },
         {
           "caption": "User picked [bestell...]",
@@ -82,66 +65,6 @@
       ],
       "onEnter": null,
       "onReceive": null
-    },
-    {
-      "id": "fc3b76e1b3",
-      "name": "Rezept",
-      "next": [
-        {
-          "condition": "temp.rezeptStyle",
-          "node": "Wuensche"
-        },
-        {
-          "condition": "true",
-          "node": "Rezept_Frage"
-        }
-      ],
-      "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "skill-610f6b",
-      "type": "skill-call",
-      "skill": "choice",
-      "name": "Wuensche",
-      "flow": "skills/choice-610f6b.flow.json",
-      "next": [
-        {
-          "caption": "User picked [ja]",
-          "condition": "temp['skill-choice-ret-cefivstw20'] == \"ja\"",
-          "node": "Rezept"
-        },
-        {
-          "caption": "User picked [nein]",
-          "condition": "temp['skill-choice-ret-cefivstw20'] == \"nein\"",
-          "node": "suche.flow.json"
-        },
-        {
-          "caption": "On failure",
-          "condition": "true",
-          "node": "node-f865"
-        }
-      ],
-      "onEnter": null,
-      "onReceive": null
-    },
-    {
-      "id": "4633ca319c",
-      "name": "node-f865",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Rezept"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-tvi3Gu"
-      ],
-      "onReceive": null,
-      "type": "standard"
     },
     {
       "id": "f9b51db71a",
@@ -176,7 +99,7 @@
         },
         {
           "condition": "event.nlu.intent.name === 'rezept'",
-          "node": "Rezept"
+          "node": "rezept.flow.json"
         },
         {
           "condition": "event.nlu.intent.name === 'bestellen'",

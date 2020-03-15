@@ -35,11 +35,18 @@
     {
       "id": "62820198a4",
       "name": "node-e6ea-copy",
-      "next": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "API_Standort"
+        }
+      ],
       "onEnter": [
         "say #!builtin_text-C2G4tG"
       ],
-      "onReceive": null,
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"bestellCity\",\"value\":\"{{event.payload.text}}\"}"
+      ],
       "type": "standard"
     },
     {
@@ -48,7 +55,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "node-e6ea-copy"
+          "node": "node-0981"
         }
       ],
       "onEnter": [
@@ -65,11 +72,41 @@
       "next": [
         {
           "condition": "temp.restaurantStyle",
-          "node": "node-e6ea-copy"
+          "node": "node-0981"
         },
         {
           "condition": "true",
           "node": "node-1470-copy"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "6713b52b30",
+      "name": "node-0981",
+      "next": [
+        {
+          "condition": "temp.bestellCity",
+          "node": "API_Standort"
+        },
+        {
+          "condition": "true",
+          "node": "node-e6ea-copy"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "8ad8630f7a",
+      "name": "API_Standort",
+      "next": [
+        {
+          "condition": "true",
+          "node": "suche.flow.json"
         }
       ],
       "onEnter": [],
