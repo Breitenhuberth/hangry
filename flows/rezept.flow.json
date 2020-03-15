@@ -20,7 +20,7 @@
       "name": "Rezept-copy",
       "next": [
         {
-          "condition": "temp.rezeptStyle",
+          "condition": "event.nlu.intent.name === 'rezept'",
           "node": ""
         },
         {

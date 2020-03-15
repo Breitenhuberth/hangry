@@ -21,6 +21,24 @@
       "Welche Restaurants gibt es bei mir in der Nähe?",
       "Empfehle mir ein gutes [vietnamesisches](resStyleSlot) Restaurant in [Leipzig](resCitySlot).",
       "Finde ein [griechisches](resStyleSlot) Restaurant in [London](resCitySlot)."
+    ],
+    "de": [
+      "restaurant",
+      "Ich möchte essen gehen.",
+      "Ich möchte in ein Restaurant gehen.",
+      "Wo kann ich essen gehen?",
+      "Ich möchte [italienisch](resStyleSlot) essen gehen.",
+      "Ich möchte [Pizza](resStyleSlot) essen gehen.",
+      "Wo kann ich [Burger](resStyleSlot) essen gehen.",
+      "Wo kann ich [günstig](resStyleSlot) essen gehen.",
+      "Finde ein [gehobenes](resStyleSlot) Restaurant für mich.",
+      "Wo ist die nächste [Imbissbude](resStyleSlot).",
+      "Ich würde gerne [asiatisch](resStyleSlot) essen gehen hier in [Ulm](resCitySlot). Darf [nicht teuer](resStyleSlot) sein.",
+      "Ich suche ein [koreanisches](resStyleSlot) Restaurant in der Nähe.",
+      "Ich hätte gerne einen Tip, wo ich was gutes Essen gehen kann, aber soll [nicht so teuer](resStyleSlot) sein.",
+      "Welche Restaurants gibt es bei mir in der Nähe?",
+      "Empfehle mir ein gutes [vietnamesisches](resStyleSlot) Restaurant in [Leipzig](resCitySlot).",
+      "Finde ein [griechisches](resStyleSlot) Restaurant in [London](resCitySlot)."
     ]
   },
   "slots": [

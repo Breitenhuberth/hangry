@@ -11,6 +11,16 @@
       "Weiß nicht was ich essen soll.",
       "Bin mir nicht sicher auf was ich Lust habe.",
       "Was könnte ich essen?"
+    ],
+    "de": [
+      "nicht sicher",
+      "Ich weiß nicht.",
+      "Ich bin mir nicht sicher.",
+      "Weiß nicht was ich essen soll.",
+      "Was könnte ich essen?",
+      "Bin mir nicht sicher auf was ich Lust habe.",
+      "Sag mir bitte was ich essen kann.",
+      "Mach mir bitte einen Vorschlag was ich essen kann."
     ]
   },
   "slots": []

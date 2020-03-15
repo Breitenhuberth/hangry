@@ -15,6 +15,18 @@
       "Wo kann ich [vegetarisches](bestellStyleSlot) Essen bestellen?",
       "Ich würde gerne in [Leipzig](bestellCitySlot) [vietnamesisch](bestellStyleSlot) bestellen.",
       "Wo kann ich in [Berlin](bestellCitySlot) [Sandwiches](bestellGerichtSlot) bestellen."
+    ],
+    "de": [
+      "bestellen",
+      "Ich möchte essen bestellen.",
+      "Ich würde gerne was zu essen bestellen.",
+      " Wo kann ich mir etwas zu essen bestellen.",
+      "  Welches Restaurant liefert in meiner Nähe?",
+      "  Ich würde am liebsten Essen bestellen.",
+      "   Ich würde gerne [Pizza](bestellGerichtSlot) bestellen.",
+      "   Wo kann ich [vegetarisches](bestellStyleSlot) Essen bestellen?",
+      "   Ich würde gerne in [Leipzig](bestellCitySlot) [vietnamesisch](bestellStyleSlot) bestellen.",
+      "   Wo kann ich in [Berlin](bestellCitySlot) [Sandwiches](bestellGerichtSlot) bestellen."
     ]
   },
   "slots": [

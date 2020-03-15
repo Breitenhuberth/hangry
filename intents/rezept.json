@@ -21,6 +21,24 @@
       "Ich würde gerne ein [Auflauf](rezGerichtSlot) machen.",
       "Wie mache ich [Pizza](rezGerichtSlot)?",
       "Wie bereite ich [Pfannkuchen](rezGerichtSlot) zu?"
+    ],
+    "de": [
+      "rezept",
+      "Was kann ich kochen?",
+      "Ich weiß nicht was ich kochen soll.",
+      "Kannst du mir ein Rezept vorschlagen.",
+      "Was kann ich heute Abend kochen?",
+      "Hast du ein [veganes](rezStyleSlot) Rezept für mich?",
+      "Ich möchte etwas [Vegetarisches](rezStyleSlot) kochen.",
+      "Was kann ich [ohne Ofen](rezStyleSlot) kochen.",
+      "Gib mir ein [schnelles](rezStyleSlot) Gericht das ich kochen kann.",
+      "Sag mir ein [veganes](rezStyleSlot) Gericht.",
+      "Schlage mir ein [saisonales](rezStyleSlot) Rezept vor.",
+      "Selber kochen.",
+      "Hast du ein gutes Rezept für [Nudeln](rezGerichtSlot).",
+      "Ich würde gerne ein [Auflauf](rezGerichtSlot) machen.",
+      "Wie mache ich [Pizza](rezGerichtSlot)?",
+      "Wie bereite ich [Pfannkuchen](rezGerichtSlot) zu?"
     ]
   },
   "slots": [

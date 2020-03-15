@@ -84,37 +84,6 @@
       "onReceive": null
     },
     {
-      "id": "1815c2ac68",
-      "name": "Suche",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Einverstaendnis"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-i02hCM",
-        "say #!builtin_text-Bekk8u"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "ba6108b5b6",
-      "name": "Ende",
-      "next": [
-        {
-          "condition": "true",
-          "node": "END"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-Xfm8ck"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
       "id": "fc3b76e1b3",
       "name": "Rezept",
       "next": [
@@ -148,7 +117,7 @@
         {
           "caption": "User picked [nein]",
           "condition": "temp['skill-choice-ret-cefivstw20'] == \"nein\"",
-          "node": "Suche"
+          "node": "suche.flow.json"
         },
         {
           "caption": "On failure",
@@ -175,88 +144,6 @@
       "type": "standard"
     },
     {
-      "id": "skill-e7c373",
-      "type": "skill-call",
-      "skill": "choice",
-      "name": "Einverstaendnis",
-      "flow": "skills/choice-e7c373.flow.json",
-      "next": [
-        {
-          "caption": "User picked [ja_danke]",
-          "condition": "temp['skill-choice-ret-iw89x3ystz'] == \"ja_danke\"",
-          "node": "Ende"
-        },
-        {
-          "caption": "User picked [nein_da...]",
-          "condition": "temp['skill-choice-ret-iw89x3ystz'] == \"nein_danke\"",
-          "node": "Meinungsaenderung"
-        },
-        {
-          "caption": "On failure",
-          "condition": "true",
-          "node": "Zusatz"
-        }
-      ],
-      "onEnter": null,
-      "onReceive": null
-    },
-    {
-      "id": "skill-d565b9",
-      "type": "skill-call",
-      "skill": "choice",
-      "name": "Meinungsaenderung",
-      "flow": "skills/choice-d565b9.flow.json",
-      "next": [
-        {
-          "caption": "User picked [add]",
-          "condition": "temp['skill-choice-ret-vsqoovb4i8'] == \"add\"",
-          "node": "Rezept"
-        },
-        {
-          "caption": "User picked [weiters...]",
-          "condition": "temp['skill-choice-ret-vsqoovb4i8'] == \"weitersuchen\"",
-          "node": "Suche"
-        },
-        {
-          "caption": "On failure",
-          "condition": "true",
-          "node": "Aufforderung"
-        }
-      ],
-      "onEnter": null,
-      "onReceive": null
-    },
-    {
-      "id": "85d05ace72",
-      "name": "Zusatz",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Meinungsaenderung"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": [
-        "builtin/setVariable {\"type\":\"style\",\"name\":\"rezeptStyle\",\"value\":\"{{event.payload.type}}\"}"
-      ],
-      "type": "standard"
-    },
-    {
-      "id": "176683327a",
-      "name": "Aufforderung",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Meinungsaenderung"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-zezc0m"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
       "id": "f9b51db71a",
       "name": "Gericht",
       "next": [
@@ -276,10 +163,6 @@
       "name": "Richtung",
       "next": [
         {
-          "condition": "true",
-          "node": "Default"
-        },
-        {
           "condition": "event.nlu.intent.name === 'nichtsicher'",
           "node": "Entscheidung"
         },
@@ -296,12 +179,16 @@
           "node": "Rezept"
         },
         {
+          "condition": "event.nlu.intent.name === 'bestellen'",
+          "node": "bestellen.flow.json"
+        },
+        {
           "condition": "event.nlu.intent.name == 'restaurant'",
           "node": "restaurant.flow.json"
         },
         {
-          "condition": "event.nlu.intent.name === 'bestellen'",
-          "node": "bestellen.flow.json"
+          "condition": "true",
+          "node": "Default"
         }
       ],
       "onEnter": [],

@@ -6,14 +6,12 @@
     {
       "id": "041d6438ec",
       "name": "entry",
-      "onEnter": [
-        "say #!builtin_text-i02hCM"
-      ],
+      "onEnter": [],
       "onReceive": null,
       "next": [
         {
           "condition": "true",
-          "node": "API"
+          "node": "Suche"
         }
       ]
     },
@@ -81,7 +79,7 @@
         {
           "caption": "User picked [add]",
           "condition": "temp['skill-choice-ret-ge5dd6p8i9'] == \"add\"",
-          "node": ""
+          "node": "Meinungsaenderung"
         },
         {
           "caption": "User picked [weiters...]",
@@ -123,6 +121,36 @@
       ],
       "onEnter": [
         "say #!builtin_text-p_Lcq7"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "0d1aef7888",
+      "name": "Meinungsaenderung",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Suche"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "2edd4e1094",
+      "name": "Suche",
+      "next": [
+        {
+          "condition": "true",
+          "node": "API"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-i02hCM"
       ],
       "onReceive": null,
       "type": "standard"

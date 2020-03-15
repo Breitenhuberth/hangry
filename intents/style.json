@@ -8,6 +8,11 @@
       "style",
       "Ich würde gerne [nicht so scharf](styleSlot) essen.",
       "Ich würde gerne [vegetarische](styleSlot) essen."
+    ],
+    "de": [
+      "style",
+      "Ich würde gerne [nicht so scharf](styleSlot) essen.",
+      "Ich würde gerne [vegetarische](styleSlot) essen."
     ]
   },
   "slots": [

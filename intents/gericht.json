@@ -12,6 +12,15 @@
       "Habe Lust auf [Burger](gerichtSlot).",
       "Brauche jetzt einen [Döner.](gerichtSlot)",
       "Ich möchte [Suppe](gerichtSlot) essen."
+    ],
+    "de": [
+      "gricht",
+      "Ich möchte [Pizza](gerichtSlot) essen.",
+      "Ich habe Lust auf [Nudeln](gerichtSlot).",
+      "Ich würde gerne [Rahmen](gerichtSlot) essen.",
+      "Habe Lust auf [Burger](gerichtSlot).",
+      "Brauche jetzt einen [Döner.](gerichtSlot)",
+      "Ich möchte [Suppe](gerichtSlot) essen."
     ]
   },
   "slots": [
