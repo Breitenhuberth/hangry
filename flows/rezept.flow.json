@@ -22,9 +22,7 @@
     {
       "id": "351bf65e8b",
       "name": "entry",
-      "onEnter": [
-        "say #!builtin_text-f7lV3F"
-      ],
+      "onEnter": [],
       "onReceive": null,
       "next": [
         {
@@ -36,7 +34,12 @@
     {
       "id": "94443423de",
       "name": "node-c278",
-      "next": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "Rezept"
+        }
+      ],
       "onEnter": [
         "say #!builtin_text-f7lV3F"
       ],
@@ -53,7 +56,7 @@
         {
           "caption": "User picked [ja]",
           "condition": "temp['skill-choice-ret-3n2ig0je44'] == \"ja\"",
-          "node": "node-3870"
+          "node": "Hinzufuegen"
         },
         {
           "caption": "User picked [nein]",
@@ -68,21 +71,6 @@
       ],
       "onEnter": null,
       "onReceive": null
-    },
-    {
-      "id": "bf8abf91ba",
-      "name": "node-3870",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Rezept-copy"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-k1ZV3u"
-      ],
-      "onReceive": null,
-      "type": "standard"
     },
     {
       "id": "b392ac67b3",
@@ -118,6 +106,23 @@
       ],
       "onEnter": [],
       "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "bf8abf91ba",
+      "name": "Hinzufuegen",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Entscheidung"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-k1ZV3u"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezStyle\",\"value\":\"{{event.payload.text}}\"}"
+      ],
       "type": "standard"
     }
   ]

@@ -28,8 +28,8 @@
       "Ich möchte in ein Restaurant gehen.",
       "Wo kann ich essen gehen?",
       "Ich möchte [italienisch](resStyleSlot) essen gehen.",
-      "Ich möchte [Pizza](resStyleSlot) essen gehen.",
-      "Wo kann ich [Burger](resStyleSlot) essen gehen.",
+      "Ich möchte [Pizza](resGerichtSlot) essen gehen.",
+      "Wo kann ich [Burger](resGerichtSlot) essen gehen.",
       "Wo kann ich [günstig](resStyleSlot) essen gehen.",
       "Finde ein [gehobenes](resStyleSlot) Restaurant für mich.",
       "Wo ist die nächste [Imbissbude](resStyleSlot).",
@@ -57,6 +57,14 @@
         "city"
       ],
       "color": 2
+    },
+    {
+      "id": "oWCCAoRA-XmGB30Z_4E-d",
+      "name": "resGerichtSlot",
+      "entities": [
+        "gericht"
+      ],
+      "color": 3
     }
   ]
 }
