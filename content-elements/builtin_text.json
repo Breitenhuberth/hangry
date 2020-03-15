@@ -267,5 +267,16 @@
     "createdBy": "admin",
     "createdOn": "2020-03-15T16:27:42.736Z",
     "modifiedOn": "2020-03-15T16:27:42.736Z"
+  },
+  {
+    "id": "builtin_text-k1ZV3u",
+    "formData": {
+      "markdown$de": true,
+      "typing$de": true,
+      "text$de": "Was würdest du gerne hinzufügen?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-15T20:11:10.224Z",
+    "modifiedOn": "2020-03-15T20:11:10.224Z"
   }
 ]

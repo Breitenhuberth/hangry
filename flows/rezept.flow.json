@@ -4,33 +4,119 @@
   "startNode": "entry",
   "nodes": [
     {
-      "id": "351bf65e8b",
-      "name": "entry",
-      "onEnter": [],
-      "onReceive": null,
+      "id": "0cb27179f5",
+      "name": "Rezept",
       "next": [
         {
           "condition": "true",
           "node": "Rezept-copy"
         }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.rezGerichtSlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "351bf65e8b",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-f7lV3F"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "Rezept"
+        }
       ]
     },
     {
-      "id": "0cb27179f5",
-      "name": "Rezept-copy",
+      "id": "94443423de",
+      "name": "node-c278",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-f7lV3F"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-41ff0a",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "Entscheidung",
+      "flow": "skills/choice-41ff0a.flow.json",
       "next": [
         {
-          "condition": "event.nlu.intent.name === 'rezept'",
-          "node": ""
+          "caption": "User picked [ja]",
+          "condition": "temp['skill-choice-ret-3n2ig0je44'] == \"ja\"",
+          "node": "node-3870"
         },
         {
+          "caption": "User picked [nein]",
+          "condition": "temp['skill-choice-ret-3n2ig0je44'] == \"nein\"",
+          "node": "suche.flow.json"
+        },
+        {
+          "caption": "On failure",
           "condition": "true",
-          "node": ""
+          "node": "Default_Entscheidung"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "bf8abf91ba",
+      "name": "node-3870",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Rezept-copy"
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}"
+        "say #!builtin_text-k1ZV3u"
       ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "b392ac67b3",
+      "name": "Default_Entscheidung",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Entscheidung"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-p_Lcq7"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d374cbbf48",
+      "name": "Rezept-copy",
+      "next": [
+        {
+          "condition": "temp.rezeptStyle",
+          "node": "Entscheidung"
+        },
+        {
+          "condition": "temp.rezeptGericht",
+          "node": "Entscheidung"
+        },
+        {
+          "condition": "true",
+          "node": "node-c278"
+        }
+      ],
+      "onEnter": [],
       "onReceive": null,
       "type": "standard"
     }

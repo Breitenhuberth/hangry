@@ -32,63 +32,57 @@
       "type": "standard"
     },
     {
-      "id": "9f458476b0",
-      "name": "Restaurantart-copy",
-      "next": [
-        {
-          "condition": "temp.restaurantStyle",
-          "node": "Standort_Frage-copy"
-        },
-        {
-          "condition": "true",
-          "node": "Restaurant_Frage-copy"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
       "id": "62a3bead5e",
-      "name": "Restaurant_Frage-copy",
+      "name": "Restaurant_Frage",
       "next": [
         {
           "condition": "true",
-          "node": "node-36ae-copy"
+          "node": "Standort_Frage"
         }
       ],
       "onEnter": [
         "say #!builtin_text-EZhKeE"
       ],
       "onReceive": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"restautrantStyle\",\"value\":\"{{event.payload.text}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resStyleSlot\",\"value\":\"{{event.payload.text}}\"}"
       ],
       "type": "standard"
     },
     {
       "id": "30bdfe6a96",
-      "name": "Standort_Frage-copy",
+      "name": "Standort_Frage",
       "next": [
         {
           "condition": "true",
-          "node": "node-36ae-copy"
+          "node": "suche.flow.json"
         }
       ],
       "onEnter": [
         "say #!builtin_text-C2G4tG"
       ],
       "onReceive": [
-        "builtin/setVariable {\"type\":\"\",\"name\":\"\",\"value\":\"\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resCitySlot\",\"value\":\"{{event.payload.text}}\"}"
       ],
       "type": "standard"
     },
     {
-      "id": "9d24b71328",
-      "name": "node-36ae-copy",
-      "next": [],
-      "onEnter": [
-        "say #!builtin_text-y42IuN"
+      "id": "9f458476b0",
+      "name": "Restaurantart-copy",
+      "next": [
+        {
+          "condition": "temp.restaurantStyle",
+          "node": "Standort_Frage"
+        },
+        {
+          "condition": "temp.restaurantStyle",
+          "node": "Standort_Frage"
+        },
+        {
+          "condition": "true",
+          "node": "Restaurant_Frage"
+        }
       ],
+      "onEnter": [],
       "onReceive": null,
       "type": "standard"
     }
