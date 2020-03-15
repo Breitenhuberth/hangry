@@ -1,0 +1,80 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "c5d1b5bed1",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "Bestellen-copy"
+        }
+      ]
+    },
+    {
+      "id": "72849e12f4",
+      "name": "Bestellen-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Bestellart-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"bestellGericht\",\"value\":\"{{event.nlu.slots.bestellGerichtSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"bestellStyle\",\"value\":\"{{event.nlu.slots.bestellStyleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"bestellCity\",\"value\":\"{{event.nlu.slots.bestellCitySlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "62820198a4",
+      "name": "node-e6ea-copy",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-C2G4tG"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d812411fbf",
+      "name": "node-1470-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-e6ea-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-f7lV3F"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"restautrantStyle\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "333f62456c",
+      "name": "Bestellart-copy",
+      "next": [
+        {
+          "condition": "temp.restaurantStyle",
+          "node": "node-e6ea-copy"
+        },
+        {
+          "condition": "true",
+          "node": "node-1470-copy"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

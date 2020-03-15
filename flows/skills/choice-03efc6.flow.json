@@ -1,0 +1,86 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "contentId": "builtin_single-choice-SKCh2q",
+    "invalidContentId": "",
+    "keywords": {
+      "ja_danke": [
+        "ja_danke",
+        "Ja, danke!"
+      ],
+      "nein_danke": [
+        "nein_danke",
+        "Nein, darauf habe ich keine Lust."
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-SKCh2q {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "124960"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"contentId\":\"builtin_single-choice-SKCh2q\",\"invalidContentId\":\"\",\"keywords\":{\"ja_danke\":[\"ja_danke\",\"Ja, danke!\"],\"nein_danke\":[\"nein_danke\",\"Nein, darauf habe ich keine Lust.\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false},\"randomId\":\"6dwe7q6ksu\"}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-6dwe7q6ksu'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "302338"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"6dwe7q6ksu\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-6dwe7q6ksu']) >= Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "095468"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "936314"
+    }
+  ]
+}

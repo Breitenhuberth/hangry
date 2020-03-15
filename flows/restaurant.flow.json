@@ -1,0 +1,96 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "e2f715e60f",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "Restaurant-copy"
+        }
+      ]
+    },
+    {
+      "id": "0dea78c571",
+      "name": "Restaurant-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Restaurantart-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.resStyleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resCity\",\"value\":\"{{event.nlu.slots.resCitySlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9f458476b0",
+      "name": "Restaurantart-copy",
+      "next": [
+        {
+          "condition": "temp.restaurantStyle",
+          "node": "Standort_Frage-copy"
+        },
+        {
+          "condition": "true",
+          "node": "Restaurant_Frage-copy"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "62a3bead5e",
+      "name": "Restaurant_Frage-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-36ae-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-EZhKeE"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"restautrantStyle\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "30bdfe6a96",
+      "name": "Standort_Frage-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-36ae-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-C2G4tG"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"\",\"name\":\"\",\"value\":\"\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "9d24b71328",
+      "name": "node-36ae-copy",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-y42IuN"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

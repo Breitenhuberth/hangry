@@ -1,0 +1,23 @@
+{
+  "name": "style",
+  "contexts": [
+    "global"
+  ],
+  "utterances": {
+    "en": [
+      "style",
+      "Ich würde gerne [nicht so scharf](styleSlot) essen.",
+      "Ich würde gerne [vegetarische](styleSlot) essen."
+    ]
+  },
+  "slots": [
+    {
+      "id": "ouRfP7c89lBJkLX79RZL1",
+      "name": "styleSlot",
+      "entities": [
+        "style"
+      ],
+      "color": 1
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "preis",
+  "type": "list",
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": "",
+  "occurrences": [
+    {
+      "name": "teuer",
+      "synonyms": []
+    },
+    {
+      "name": "billig",
+      "synonyms": [
+        "preiswert",
+        "günstig"
+      ]
+    },
+    {
+      "name": "gehoben",
+      "synonyms": [
+        "schick"
+      ]
+    }
+  ]
+}

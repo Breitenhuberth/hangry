@@ -1,0 +1,27 @@
+{
+  "name": "gericht",
+  "contexts": [
+    "global"
+  ],
+  "utterances": {
+    "en": [
+      "gericht",
+      "Ich möchte [Pizza](gerichtSlot) essen.",
+      "Ich habe Lust auf [Nudeln](gerichtSlot).",
+      "Ich würde gerne [Rahmen](gerichtSlot) essen.",
+      "Habe Lust auf [Burger](gerichtSlot).",
+      "Brauche jetzt einen [Döner.](gerichtSlot)",
+      "Ich möchte [Suppe](gerichtSlot) essen."
+    ]
+  },
+  "slots": [
+    {
+      "id": "IpQ5VOUXES-0ZpPitkbDz",
+      "name": "gerichtSlot",
+      "entities": [
+        "gericht"
+      ],
+      "color": 1
+    }
+  ]
+}

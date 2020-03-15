@@ -1,0 +1,75 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "041d6438ec",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-i02hCM"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "API"
+        }
+      ]
+    },
+    {
+      "id": "05b529155e",
+      "name": "API",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-b0225f"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-b0225f",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-b0225f",
+      "flow": "skills/choice-b0225f.flow.json",
+      "next": [
+        {
+          "caption": "User picked [ja_danke]",
+          "condition": "temp['skill-choice-ret-14ieabg0pe'] == \"ja_danke\"",
+          "node": "node-a06e"
+        },
+        {
+          "caption": "User picked [nein_da...]",
+          "condition": "temp['skill-choice-ret-14ieabg0pe'] == \"nein_danke\"",
+          "node": ""
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "68b98fce1f",
+      "name": "node-a06e",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Xfm8ck"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

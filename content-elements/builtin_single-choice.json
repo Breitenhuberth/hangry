@@ -1,0 +1,146 @@
+[
+  {
+    "id": "builtin_single-choice-yZwRCE",
+    "formData": {
+      "text$en": "Würdest du lieber Essen gehen, selber Kochen oder was bestellen wollen?",
+      "choices$en": [
+        {
+          "title": "Restaurant",
+          "value": "restaurant"
+        },
+        {
+          "title": "Rezept",
+          "value": "rezept"
+        },
+        {
+          "title": "Essen bestellen",
+          "value": "bestellen"
+        }
+      ],
+      "typing$en": true,
+      "text$de": "Würdest du lieber Essen gehen, selber Kochen oder was bestellen wollen?",
+      "choices$de": [
+        {
+          "title": "Restaurant",
+          "value": "restaurant"
+        },
+        {
+          "title": "Rezept",
+          "value": "rezept"
+        },
+        {
+          "title": "Essen bestellen",
+          "value": "bestellen"
+        }
+      ],
+      "typing$de": true,
+      "markdown$en": true,
+      "markdown$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T17:11:23.421Z",
+    "modifiedOn": "2020-03-15T14:41:47.533Z"
+  },
+  {
+    "id": "builtin_single-choice-QGtKhu",
+    "formData": {
+      "text$en": "Hast du noch andere Wünsche die ich beachten soll?",
+      "choices$en": [
+        {
+          "title": "Ja, ich möchte noch was hinzufügen.",
+          "value": "ja"
+        },
+        {
+          "title": "Nein, das ist alles.",
+          "value": "nein"
+        }
+      ],
+      "typing$en": true,
+      "text$de": "Hast du noch andere Wünsche die ich beachten soll?",
+      "choices$de": [
+        {
+          "title": "Ja, ich möchte noch was hinzufügen.",
+          "value": "ja"
+        },
+        {
+          "title": "Nein, das ist alles.",
+          "value": "nein"
+        }
+      ],
+      "typing$de": true,
+      "markdown$en": true,
+      "markdown$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T22:34:07.952Z",
+    "modifiedOn": "2020-03-15T14:41:47.599Z"
+  },
+  {
+    "id": "builtin_single-choice-SKCh2q",
+    "formData": {
+      "text$en": "Ist das hier was für dich?",
+      "choices$en": [
+        {
+          "title": "Ja, danke!",
+          "value": "ja_danke"
+        },
+        {
+          "title": "Nein, darauf habe ich keine Lust.",
+          "value": "nein_danke"
+        }
+      ],
+      "typing$en": true,
+      "text$de": "Ist das hier was für dich?",
+      "choices$de": [
+        {
+          "title": "Ja, danke!",
+          "value": "ja_danke"
+        },
+        {
+          "title": "Nein, darauf habe ich keine Lust.",
+          "value": "nein_danke"
+        }
+      ],
+      "typing$de": true,
+      "markdown$en": true,
+      "markdown$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T22:43:11.463Z",
+    "modifiedOn": "2020-03-15T14:41:47.609Z"
+  },
+  {
+    "id": "builtin_single-choice-bvtDS2",
+    "formData": {
+      "text$en": "Möchtest du noch einen Wunsch hinzufügen oder soll ich einfach weitersuchen? ",
+      "choices$en": [
+        {
+          "title": "Etwas hinzufügen!",
+          "value": "add"
+        },
+        {
+          "title": "Bitte weitersuchen!",
+          "value": "weitersuchen"
+        }
+      ],
+      "typing$en": true,
+      "text$de": "Möchtest du noch einen Wunsch hinzufügen oder soll ich einfach weitersuchen? ",
+      "choices$de": [
+        {
+          "title": "Etwas hinzufügen!",
+          "value": "add"
+        },
+        {
+          "title": "Bitte weitersuchen!",
+          "value": "weitersuchen"
+        }
+      ],
+      "typing$de": true,
+      "markdown$en": true,
+      "markdown$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T22:45:38.137Z",
+    "modifiedOn": "2020-03-15T14:41:47.617Z"
+  }
+]

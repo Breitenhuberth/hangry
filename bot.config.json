@@ -1,0 +1,48 @@
+{
+  "locked": false,
+  "disabled": false,
+  "private": false,
+  "details": {
+    "avatarUrl": "",
+    "coverPictureUrl": ""
+  },
+  "$schema": "../../bot.config.schema.json",
+  "description": "Chatbot zum Finden von Rezepten, Restaurants und Essen bestellen",
+  "active": true,
+  "version": "12.7.1",
+  "author": "Botpress, Inc.",
+  "license": "AGPL-3.0",
+  "imports": {
+    "modules": [],
+    "incomingMiddleware": [],
+    "outgoingMiddleware": [],
+    "contentTypes": [
+      "builtin_action-button",
+      "builtin_card",
+      "builtin_carousel",
+      "builtin_image",
+      "builtin_single-choice",
+      "builtin_text",
+      "dropdown"
+    ]
+  },
+  "dialog": {
+    "timeoutInterval": "5m"
+  },
+  "logs": {
+    "expiration": "1 week"
+  },
+  "defaultLanguage": "de",
+  "languages": [
+    "de"
+  ],
+  "id": "hangry",
+  "name": "Hangry",
+  "pipeline_status": {
+    "current_stage": {
+      "id": "prod",
+      "promoted_on": "2020-01-15T16:25:31.993Z",
+      "promoted_by": "theresa.breitenhuber@stud.htwk-leipzig.de"
+    }
+  }
+}

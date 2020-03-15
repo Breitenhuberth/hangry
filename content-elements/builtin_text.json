@@ -1,0 +1,271 @@
+[
+  {
+    "id": "builtin_text-h14GPA",
+    "formData": {
+      "text$en": "Hi! Ich bin HANGRY. Was kann ich für dich tun, damit du nicht auch (h)angry wirst?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Hi! Ich bin HANGRY. Was kann ich für dich tun, damit du nicht auch (h)angry wirst?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-15T16:29:40.912Z",
+    "modifiedOn": "2020-03-15T14:41:47.625Z"
+  },
+  {
+    "id": "builtin_text-hpQZ9y",
+    "formData": {
+      "text$en": "Ich kann dir helfen ein passendes Rezept zu finden, ein Restaurant in deiner Nähe rausfinden oder dir Essen nach Hause bestellen.",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Ich kann dir helfen ein passendes Rezept zu finden, ein Restaurant in deiner Nähe rausfinden oder dir Essen nach Hause bestellen.",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-15T16:53:41.471Z",
+    "modifiedOn": "2020-03-15T14:41:47.639Z"
+  },
+  {
+    "id": "builtin_text-tvi3Gu",
+    "formData": {
+      "text$en": "Das habe ich leider nicht verstanden. Könntest du das nochmal anders formulieren?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Das habe ich leider nicht verstanden. Könntest du das nochmal anders formulieren?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-15T16:55:30.795Z",
+    "modifiedOn": "2020-03-15T14:41:47.647Z"
+  },
+  {
+    "id": "builtin_text-90jC41",
+    "formData": {
+      "text$en": "An welche Essens-Richtung hast du gedacht?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "An welche Essens-Richtung hast du gedacht?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-15T17:22:34.249Z",
+    "modifiedOn": "2020-03-15T14:41:47.657Z"
+  },
+  {
+    "id": "builtin_text-Bekk8u",
+    "formData": {
+      "text$en": "Ok. Ich habe folgende {{temp.rezeptStyle}} Rezepte für dich gefunden:",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Ist das hier was für dich?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-15T17:28:24.545Z",
+    "modifiedOn": "2020-03-15T15:54:05.392Z"
+  },
+  {
+    "id": "builtin_text-d1Y4WY",
+    "formData": {
+      "text$en": "Noch nicht umgesetzt!",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Noch nicht umgesetzt!",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-15T17:29:03.863Z",
+    "modifiedOn": "2020-03-15T14:41:47.672Z"
+  },
+  {
+    "id": "builtin_text-bKOsVD",
+    "formData": {
+      "text$en": "Im Moment kann ich noch kein Essen für dich bestellen.",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Im Moment kann ich noch kein Essen für dich bestellen.",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-15T17:29:39.664Z",
+    "modifiedOn": "2020-03-15T14:41:47.680Z"
+  },
+  {
+    "id": "builtin_text-EZhKeE",
+    "formData": {
+      "text$en": "Ich kann dir viele gute Tips geben wo du essen gehen kannst. Was würdest du gerne essen?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Ich kann dir viele gute Tips geben wo du essen gehen kannst. Was würdest du gerne essen?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-17T12:54:08.201Z",
+    "modifiedOn": "2020-03-15T14:41:47.687Z"
+  },
+  {
+    "id": "builtin_text-C2G4tG",
+    "formData": {
+      "text$en": "Könntest du mir dein genaueren Standort verraten?",
+      "variations$en": [
+        ""
+      ],
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Könntest du mir dein genaueren Standort verraten?",
+      "variations$de": [
+        ""
+      ],
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-17T12:57:02.927Z",
+    "modifiedOn": "2020-03-15T14:41:47.696Z"
+  },
+  {
+    "id": "builtin_text-kv_Ffj",
+    "formData": {
+      "text$en": "Würdest du lieber Essen gehen, selber Kochen oder was bestellen wollen?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Würdest du lieber Essen gehen, selber Kochen oder was bestellen wollen?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T15:27:36.218Z",
+    "modifiedOn": "2020-03-15T14:41:47.704Z"
+  },
+  {
+    "id": "builtin_text-f7lV3F",
+    "formData": {
+      "text$en": "An welche Essens-Richtung hast du gedacht?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "An welche Essens-Richtung hast du gedacht?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T17:21:36.977Z",
+    "modifiedOn": "2020-03-15T14:41:47.712Z"
+  },
+  {
+    "id": "builtin_text-y42IuN",
+    "formData": {
+      "text$en": "Hast du sonst noch andere Wünsche die ich beachten soll?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Hast du sonst noch andere Wünsche die ich beachten soll?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T17:25:29.033Z",
+    "modifiedOn": "2020-03-15T14:41:47.722Z"
+  },
+  {
+    "id": "builtin_text-lZx93N",
+    "formData": {
+      "text$en": "Hast du sonst noch andere Wünsche die ich beachten soll?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Hast du sonst noch andere Wünsche die ich beachten soll?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T21:24:36.614Z",
+    "modifiedOn": "2020-03-15T14:41:47.728Z"
+  },
+  {
+    "id": "builtin_text-i02hCM",
+    "formData": {
+      "text$en": "Alles klar! Dann gehe ich sofort für dich auf die Suche!",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Alles klar! Dann gehe ich sofort für dich auf die Suche!",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T21:26:31.615Z",
+    "modifiedOn": "2020-03-15T14:41:47.736Z"
+  },
+  {
+    "id": "builtin_text-V5cC3w",
+    "formData": {
+      "text$en": "Ist das hier was für dich?",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Ist das hier was für dich?",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T21:27:10.757Z",
+    "modifiedOn": "2020-03-15T14:41:47.743Z"
+  },
+  {
+    "id": "builtin_text-Xfm8ck",
+    "formData": {
+      "text$en": "Super! Dann guten Appetit!",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Super! Dann guten Appetit!",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T21:36:43.173Z",
+    "modifiedOn": "2020-03-15T14:41:47.750Z"
+  },
+  {
+    "id": "builtin_text-tWrTUj",
+    "formData": {
+      "text$en": "Möchtest du noch einen Wunsch hinzufügen oder soll ich einfach weitersuchen? ",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Möchtest du noch einen Wunsch hinzufügen oder soll ich einfach weitersuchen? ",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T22:44:20.884Z",
+    "modifiedOn": "2020-03-15T14:41:47.758Z"
+  },
+  {
+    "id": "builtin_text-zezc0m",
+    "formData": {
+      "text$en": "Triff bitte eine Entscheidung.",
+      "markdown$en": true,
+      "typing$en": true,
+      "text$de": "Triff bitte eine Entscheidung.",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-14T22:53:08.413Z",
+    "modifiedOn": "2020-03-15T14:41:47.766Z"
+  },
+  {
+    "id": "builtin_text-p_Lcq7",
+    "formData": {
+      "text$de": "Bitte triff eine Entscheidung!",
+      "markdown$de": true,
+      "typing$de": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-15T16:27:42.736Z",
+    "modifiedOn": "2020-03-15T16:27:42.736Z"
+  }
+]

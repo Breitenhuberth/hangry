@@ -1,0 +1,327 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "8fc34cbbea",
+      "name": "Default",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Richtung"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-tvi3Gu"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "95826e57be",
+      "name": "Rezept_Frage",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Wuensche"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-90jC41"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Richtung"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-h14GPA"
+      ],
+      "onReceive": []
+    },
+    {
+      "id": "skill-b90d15",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "Entscheidung",
+      "flow": "skills/choice-b90d15.flow.json",
+      "next": [
+        {
+          "caption": "User picked [restaur...]",
+          "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"restaurant\"",
+          "node": "Rezept"
+        },
+        {
+          "caption": "User picked [rezept]",
+          "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"rezept\"",
+          "node": "restaurant.flow.json"
+        },
+        {
+          "caption": "User picked [bestell...]",
+          "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"bestellen\"",
+          "node": "bestellen.flow.json"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "Default"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "1815c2ac68",
+      "name": "Suche",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Einverstaendnis"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-i02hCM",
+        "say #!builtin_text-Bekk8u"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "ba6108b5b6",
+      "name": "Ende",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Xfm8ck"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "fc3b76e1b3",
+      "name": "Rezept",
+      "next": [
+        {
+          "condition": "temp.rezeptStyle",
+          "node": "Wuensche"
+        },
+        {
+          "condition": "true",
+          "node": "Rezept_Frage"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-610f6b",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "Wuensche",
+      "flow": "skills/choice-610f6b.flow.json",
+      "next": [
+        {
+          "caption": "User picked [ja]",
+          "condition": "temp['skill-choice-ret-cefivstw20'] == \"ja\"",
+          "node": "Rezept"
+        },
+        {
+          "caption": "User picked [nein]",
+          "condition": "temp['skill-choice-ret-cefivstw20'] == \"nein\"",
+          "node": "Suche"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "node-f865"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "4633ca319c",
+      "name": "node-f865",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Rezept"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-tvi3Gu"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-e7c373",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "Einverstaendnis",
+      "flow": "skills/choice-e7c373.flow.json",
+      "next": [
+        {
+          "caption": "User picked [ja_danke]",
+          "condition": "temp['skill-choice-ret-iw89x3ystz'] == \"ja_danke\"",
+          "node": "Ende"
+        },
+        {
+          "caption": "User picked [nein_da...]",
+          "condition": "temp['skill-choice-ret-iw89x3ystz'] == \"nein_danke\"",
+          "node": "Meinungsaenderung"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "Zusatz"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-d565b9",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "Meinungsaenderung",
+      "flow": "skills/choice-d565b9.flow.json",
+      "next": [
+        {
+          "caption": "User picked [add]",
+          "condition": "temp['skill-choice-ret-vsqoovb4i8'] == \"add\"",
+          "node": "Rezept"
+        },
+        {
+          "caption": "User picked [weiters...]",
+          "condition": "temp['skill-choice-ret-vsqoovb4i8'] == \"weitersuchen\"",
+          "node": "Suche"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "Aufforderung"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "85d05ace72",
+      "name": "Zusatz",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Meinungsaenderung"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"style\",\"name\":\"rezeptStyle\",\"value\":\"{{event.payload.type}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "176683327a",
+      "name": "Aufforderung",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Meinungsaenderung"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-zezc0m"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f9b51db71a",
+      "name": "Gericht",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Entscheidung"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e13ab49a4b",
+      "name": "Richtung",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Default"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'nichtsicher'",
+          "node": "Entscheidung"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'gericht'",
+          "node": "Gericht"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'style'",
+          "node": "Style"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'rezept'",
+          "node": "Rezept"
+        },
+        {
+          "condition": "event.nlu.intent.name == 'restaurant'",
+          "node": "restaurant.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'bestellen'",
+          "node": "bestellen.flow.json"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "fa7e5bc16c",
+      "name": "Style",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Entscheidung"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

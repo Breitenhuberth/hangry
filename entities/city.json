@@ -1,0 +1,41 @@
+{
+  "name": "city",
+  "type": "list",
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": "",
+  "occurrences": [
+    {
+      "name": "Ulm",
+      "synonyms": []
+    },
+    {
+      "name": "Chicago",
+      "synonyms": []
+    },
+    {
+      "name": "New York",
+      "synonyms": []
+    },
+    {
+      "name": "Leipzig",
+      "synonyms": []
+    },
+    {
+      "name": "München",
+      "synonyms": []
+    },
+    {
+      "name": "Glasgow",
+      "synonyms": []
+    },
+    {
+      "name": "Paris",
+      "synonyms": []
+    },
+    {
+      "name": "Moskau",
+      "synonyms": []
+    }
+  ]
+}

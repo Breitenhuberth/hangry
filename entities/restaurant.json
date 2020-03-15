@@ -1,0 +1,47 @@
+{
+  "name": "restaurant",
+  "type": "list",
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": "",
+  "occurrences": [
+    {
+      "name": "Imbissbude",
+      "synonyms": []
+    },
+    {
+      "name": "vegetarisch",
+      "synonyms": [
+        "ohne Fleisch"
+      ]
+    },
+    {
+      "name": "gehoben",
+      "synonyms": []
+    },
+    {
+      "name": "gemütlich",
+      "synonyms": []
+    },
+    {
+      "name": "italienisch",
+      "synonyms": [
+        "südländisch"
+      ]
+    },
+    {
+      "name": "syrisch",
+      "synonyms": [
+        "arabisch"
+      ]
+    },
+    {
+      "name": "französisch",
+      "synonyms": []
+    },
+    {
+      "name": "griechisch",
+      "synonyms": []
+    }
+  ]
+}

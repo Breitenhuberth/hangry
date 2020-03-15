@@ -1,0 +1,49 @@
+{
+  "name": "style",
+  "type": "list",
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": "",
+  "occurrences": [
+    {
+      "name": "vegan",
+      "synonyms": [
+        "ohne tierische Produkte"
+      ]
+    },
+    {
+      "name": "vegetarisch",
+      "synonyms": [
+        "ohne Fleisch"
+      ]
+    },
+    {
+      "name": "ohne Ofen",
+      "synonyms": []
+    },
+    {
+      "name": "süß",
+      "synonyms": []
+    },
+    {
+      "name": "salzig",
+      "synonyms": []
+    },
+    {
+      "name": "herzhaft",
+      "synonyms": []
+    },
+    {
+      "name": "schnell",
+      "synonyms": []
+    },
+    {
+      "name": "italienisch",
+      "synonyms": []
+    },
+    {
+      "name": "arabisch",
+      "synonyms": []
+    }
+  ]
+}

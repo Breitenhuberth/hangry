@@ -1,0 +1,17 @@
+{
+  "name": "nichtsicher",
+  "contexts": [
+    "global"
+  ],
+  "utterances": {
+    "en": [
+      "nichtsicher",
+      "Ich weiß nicht.",
+      "Ich bin mir nicht sicher.",
+      "Weiß nicht was ich essen soll.",
+      "Bin mir nicht sicher auf was ich Lust habe.",
+      "Was könnte ich essen?"
+    ]
+  },
+  "slots": []
+}

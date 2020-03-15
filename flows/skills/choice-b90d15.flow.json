@@ -1,0 +1,90 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "contentId": "builtin_single-choice-yZwRCE",
+    "invalidContentId": "",
+    "keywords": {
+      "restaurant": [
+        "restaurant",
+        "Restaurant"
+      ],
+      "rezept": [
+        "rezept",
+        "Rezept"
+      ],
+      "bestellen": [
+        "bestellen",
+        "Essen bestellen"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-yZwRCE {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "571514"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"contentId\":\"builtin_single-choice-yZwRCE\",\"invalidContentId\":\"\",\"keywords\":{\"restaurant\":[\"restaurant\",\"Restaurant\"],\"rezept\":[\"rezept\",\"Rezept\"],\"bestellen\":[\"bestellen\",\"Essen bestellen\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false},\"randomId\":\"jjbpj8mvgk\"}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-jjbpj8mvgk'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "316110"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"jjbpj8mvgk\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-jjbpj8mvgk']) >= Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "599335"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "910263"
+    }
+  ]
+}

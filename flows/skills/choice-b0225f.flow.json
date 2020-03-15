@@ -1,0 +1,87 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "14ieabg0pe",
+    "contentId": "builtin_single-choice-SKCh2q",
+    "invalidContentId": "",
+    "keywords": {
+      "ja_danke": [
+        "ja_danke",
+        "Ja, danke!"
+      ],
+      "nein_danke": [
+        "nein_danke",
+        "Nein, darauf habe ich keine Lust."
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-SKCh2q {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "117184"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"14ieabg0pe\",\"contentId\":\"builtin_single-choice-SKCh2q\",\"invalidContentId\":\"\",\"keywords\":{\"ja_danke\":[\"ja_danke\",\"Ja, danke!\"],\"nein_danke\":[\"nein_danke\",\"Nein, darauf habe ich keine Lust.\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-14ieabg0pe'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "123796"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"14ieabg0pe\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-14ieabg0pe']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "924350"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "496942"
+    }
+  ]
+}
