@@ -1,0 +1,87 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "ge5dd6p8i9",
+    "contentId": "builtin_single-choice-bvtDS2",
+    "invalidContentId": "",
+    "keywords": {
+      "add": [
+        "add",
+        "Etwas hinzufügen!"
+      ],
+      "weitersuchen": [
+        "weitersuchen",
+        "Bitte weitersuchen!"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-bvtDS2 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "320923"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"ge5dd6p8i9\",\"contentId\":\"builtin_single-choice-bvtDS2\",\"invalidContentId\":\"\",\"keywords\":{\"add\":[\"add\",\"Etwas hinzufügen!\"],\"weitersuchen\":[\"weitersuchen\",\"Bitte weitersuchen!\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-ge5dd6p8i9'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "252614"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"ge5dd6p8i9\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-ge5dd6p8i9']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "145446"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "755486"
+    }
+  ]
+}

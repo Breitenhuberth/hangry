@@ -45,12 +45,12 @@
         {
           "caption": "User picked [nein_da...]",
           "condition": "temp['skill-choice-ret-14ieabg0pe'] == \"nein_danke\"",
-          "node": ""
+          "node": "choice-c2f013"
         },
         {
           "caption": "On failure",
           "condition": "true",
-          "node": ""
+          "node": "ChoiceDefault"
         }
       ],
       "onEnter": null,
@@ -67,6 +67,62 @@
       ],
       "onEnter": [
         "say #!builtin_text-Xfm8ck"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-c2f013",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-c2f013",
+      "flow": "skills/choice-c2f013.flow.json",
+      "next": [
+        {
+          "caption": "User picked [add]",
+          "condition": "temp['skill-choice-ret-ge5dd6p8i9'] == \"add\"",
+          "node": ""
+        },
+        {
+          "caption": "User picked [weiters...]",
+          "condition": "temp['skill-choice-ret-ge5dd6p8i9'] == \"weitersuchen\"",
+          "node": "API"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "ChoiceDefault2"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "59b76ac5e8",
+      "name": "ChoiceDefault",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-b0225f"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-p_Lcq7"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "5fbedd5010",
+      "name": "ChoiceDefault2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-c2f013"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-p_Lcq7"
       ],
       "onReceive": null,
       "type": "standard"
