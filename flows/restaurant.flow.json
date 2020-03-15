@@ -25,7 +25,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.resStyleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resStyle\",\"value\":\"{{event.nlu.slots.resStyleSlot.value}}\"}",
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"resCity\",\"value\":\"{{event.nlu.slots.resCitySlot.value}}\"}"
       ],
       "onReceive": null,
@@ -37,7 +37,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Standort_Frage"
+          "node": "node-ef06"
         }
       ],
       "onEnter": [
@@ -54,7 +54,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "suche.flow.json"
+          "node": "API_Standort"
         }
       ],
       "onEnter": [
@@ -70,16 +70,42 @@
       "name": "Restaurantart-copy",
       "next": [
         {
-          "condition": "temp.restaurantStyle",
-          "node": "Standort_Frage"
-        },
-        {
-          "condition": "temp.restaurantStyle",
-          "node": "Standort_Frage"
+          "condition": "temp.resStyle",
+          "node": "node-ef06"
         },
         {
           "condition": "true",
           "node": "Restaurant_Frage"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "8fe2da4250",
+      "name": "node-ef06",
+      "next": [
+        {
+          "condition": "temp.resCity",
+          "node": "API_Standort"
+        },
+        {
+          "condition": "true",
+          "node": "Standort_Frage"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c667cc0d0f",
+      "name": "API_Standort",
+      "next": [
+        {
+          "condition": "true",
+          "node": "suche.flow.json"
         }
       ],
       "onEnter": [],
