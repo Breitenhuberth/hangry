@@ -1,49 +1,22 @@
 {
+  "id": "style",
   "name": "style",
   "type": "list",
-  "fuzzy": 0.8,
-  "examples": [],
-  "pattern": "",
   "occurrences": [
     {
-      "name": "vegan",
+      "name": "vegetarisch",
       "synonyms": [
         "ohne tierische Produkte"
       ]
     },
     {
-      "name": "vegetarisch",
+      "name": "vegan",
       "synonyms": [
         "ohne Fleisch"
       ]
-    },
-    {
-      "name": "ohne Ofen",
-      "synonyms": []
-    },
-    {
-      "name": "süß",
-      "synonyms": []
-    },
-    {
-      "name": "salzig",
-      "synonyms": []
-    },
-    {
-      "name": "herzhaft",
-      "synonyms": []
-    },
-    {
-      "name": "schnell",
-      "synonyms": []
-    },
-    {
-      "name": "italienisch",
-      "synonyms": []
-    },
-    {
-      "name": "arabisch",
-      "synonyms": []
     }
-  ]
+  ],
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": ""
 }

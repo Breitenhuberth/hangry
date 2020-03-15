@@ -1,13 +1,14 @@
 {
+  "id": "preis",
   "name": "preis",
   "type": "list",
-  "fuzzy": 0.8,
-  "examples": [],
-  "pattern": "",
   "occurrences": [
     {
       "name": "teuer",
-      "synonyms": []
+      "synonyms": [
+        "schick",
+        "gehoben"
+      ]
     },
     {
       "name": "billig",
@@ -17,10 +18,11 @@
       ]
     },
     {
-      "name": "gehoben",
-      "synonyms": [
-        "schick"
-      ]
+      "name": "mittelklassig",
+      "synonyms": []
     }
-  ]
+  ],
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": ""
 }

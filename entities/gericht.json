@@ -1,36 +1,10 @@
 {
+  "id": "gericht",
   "name": "gericht",
   "type": "list",
-  "fuzzy": 0.8,
-  "examples": [],
-  "pattern": "",
   "occurrences": [
     {
-      "name": "Nudeln",
-      "synonyms": []
-    },
-    {
-      "name": "Auflauf",
-      "synonyms": []
-    },
-    {
-      "name": "Pizza",
-      "synonyms": []
-    },
-    {
-      "name": "Reis",
-      "synonyms": []
-    },
-    {
       "name": "Suppe",
-      "synonyms": []
-    },
-    {
-      "name": "Mehlspeise",
-      "synonyms": []
-    },
-    {
-      "name": "Curry",
       "synonyms": []
     },
     {
@@ -38,12 +12,27 @@
       "synonyms": []
     },
     {
-      "name": "Sushi",
+      "name": "Pizza",
       "synonyms": []
     },
     {
-      "name": "Döner",
+      "name": "Burger",
+      "synonyms": []
+    },
+    {
+      "name": "Lasagne",
+      "synonyms": []
+    },
+    {
+      "name": "Nudeln",
+      "synonyms": []
+    },
+    {
+      "name": "Sushi",
       "synonyms": []
     }
-  ]
+  ],
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": ""
 }
