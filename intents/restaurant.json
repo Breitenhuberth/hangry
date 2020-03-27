@@ -28,8 +28,8 @@
       "Ich möchte in ein Restaurant gehen.",
       "Wo kann ich essen gehen?",
       "Ich möchte [italienisch](resStyleSlot) essen gehen.",
-      "Ich möchte [Pizza](resGerichtSlot) essen gehen.",
-      "Wo kann ich [Burger](resGerichtSlot) essen gehen.",
+      "Ich möchte [Pizza](gerichtSlot) essen gehen.",
+      "Wo kann ich [Burger](gerichtSlot) essen gehen.",
       "Wo kann ich [günstig](resStyleSlot) essen gehen.",
       "Finde ein [gehobenes](resStyleSlot) Restaurant für mich.",
       "Wo ist die nächste [Imbissbude](resStyleSlot).",
@@ -38,7 +38,15 @@
       "Ich hätte gerne einen Tip, wo ich was gutes Essen gehen kann, aber soll [nicht so teuer](resStyleSlot) sein.",
       "Welche Restaurants gibt es bei mir in der Nähe?",
       "Empfehle mir ein gutes [vietnamesisches](resStyleSlot) Restaurant in [Leipzig](resCitySlot).",
-      "Finde ein [griechisches](resStyleSlot) Restaurant in [London](resCitySlot)."
+      "Finde ein [griechisches](resStyleSlot) Restaurant in [London](resCitySlot).",
+      "Ich will wo hingehen.",
+      "Ich möchte außerhalb essen.",
+      "Ich möchte wo [Döner](gerichtSlot) essen.",
+      "Ich suche nach Restaurants in [München](resCitySlot).",
+      "Ich will in [Leipzig](resCitySlot) essen gehen.",
+      "Ich würde gerne in ein Restaurant in [Köln](resCitySlot) gehen.",
+      "Zeig mir Restaurants in [Leipzig](resCitySlot).",
+      "Ich würde gerne [vegetarisch](resStyleSlot) essen gehen."
     ]
   },
   "slots": [
@@ -46,7 +54,8 @@
       "id": "MzExmy6xYP_711ftPrBix",
       "name": "resStyleSlot",
       "entities": [
-        "restaurant"
+        "restaurant",
+        "style"
       ],
       "color": 1
     },
@@ -60,7 +69,7 @@
     },
     {
       "id": "oWCCAoRA-XmGB30Z_4E-d",
-      "name": "resGerichtSlot",
+      "name": "gerichtSlot",
       "entities": [
         "gericht"
       ],

@@ -1,29 +1,28 @@
 {
   "name": "style",
-  "contexts": [
-    "global"
-  ],
   "utterances": {
-    "en": [
-      "style",
-      "Ich würde gerne [nicht so scharf](styleSlot) essen.",
-      "Ich würde gerne [vegetarische](styleSlot) essen."
-    ],
     "de": [
       "style",
       "Ich würde gerne [nicht so scharf](styleSlot) essen.",
-      "Ich würde gerne [vegetarische](styleSlot) essen.",
-      "Ich möchte [glutenfrei](styleSlot) essen."
+      "Ich würde gerne [vegetarisch](styleSlot) essen.",
+      "Ich will was [gesundes](styleSlot).",
+      "Ich möchte [vegan](styleSlot) essen.",
+      "Es sollte [ohne Fleisch](styleSlot) sein.",
+      "Ich will [kein Fleisch](styleSlot).",
+      "Es sollte [sehr scharf](styleSlot) sein"
     ]
   },
   "slots": [
     {
-      "id": "ouRfP7c89lBJkLX79RZL1",
+      "id": "TeVH3o1q3eVmqTwnP8maa",
       "name": "styleSlot",
       "entities": [
         "style"
       ],
       "color": 1
     }
+  ],
+  "contexts": [
+    "global"
   ]
 }

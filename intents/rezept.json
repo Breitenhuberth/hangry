@@ -35,10 +35,15 @@
       "Sag mir ein [veganes](rezStyleSlot) Gericht.",
       "Schlage mir ein [saisonales](rezStyleSlot) Rezept vor.",
       "Selber kochen.",
-      "Hast du ein gutes Rezept für [Nudeln](rezGerichtSlot).",
-      "Ich würde gerne ein [Auflauf](rezGerichtSlot) machen.",
-      "Wie mache ich [Pizza](rezGerichtSlot)?",
-      "Wie bereite ich [Pfannkuchen](rezGerichtSlot) zu?"
+      "Hast du ein gutes Rezept für [Nudeln](gerichtSlot).",
+      "Ich würde gerne ein [Auflauf](gerichtSlot) machen.",
+      "Wie mache ich [Pizza](gerichtSlot)?",
+      "Wie bereite ich [Pfannkuchen](gerichtSlot) zu?",
+      "Ich möchte selbst kochen.",
+      "Ich bin auf der Suche nach einem Rezept.",
+      "Ich würde das essen gerne selbst zubereiten.",
+      "Ich will etwas backen.",
+      "Ich würde gerne [Lasagne](gerichtSlot) kochen."
     ]
   },
   "slots": [
@@ -52,7 +57,7 @@
     },
     {
       "id": "KUo-rtAQVHBmTMpeE6ql9",
-      "name": "rezGerichtSlot",
+      "name": "gerichtSlot",
       "entities": [
         "gericht"
       ],

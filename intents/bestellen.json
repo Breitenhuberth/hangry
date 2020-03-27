@@ -18,21 +18,25 @@
     ],
     "de": [
       "bestellen",
-      "Ich möchte essen bestellen.",
+      "Ich möchte Essen bestellen.",
       "Ich würde gerne was zu essen bestellen.",
-      " Wo kann ich mir etwas zu essen bestellen.",
-      "  Welches Restaurant liefert in meiner Nähe?",
-      "  Ich würde am liebsten Essen bestellen.",
-      "   Ich würde gerne [Pizza](bestellGerichtSlot) bestellen.",
-      "   Wo kann ich [vegetarisches](bestellStyleSlot) Essen bestellen?",
-      "   Ich würde gerne in [Leipzig](bestellCitySlot) [vietnamesisch](bestellStyleSlot) bestellen.",
-      "   Wo kann ich in [Berlin](bestellCitySlot) [Sandwiches](bestellGerichtSlot) bestellen."
+      "Wo kann ich mir etwas zu essen bestellen.",
+      "Welches Restaurant liefert in meiner Nähe?",
+      "Ich würde am liebsten Essen bestellen.",
+      "Ich würde gerne [Pizza](gerichtSlot) bestellen.",
+      "Wo kann ich [vegetarisches](bestellStyleSlot) Essen bestellen?",
+      "Ich würde gerne in [Leipzig](bestellCitySlot) [vietnamesisch](bestellStyleSlot) bestellen.",
+      "Wo kann ich in [Berlin](bestellCitySlot) [Sandwiches](gerichtSlot) bestellen.",
+      "Ich würde gerne bestellen.",
+      "Ich will mir das Essen liefern lassen",
+      "Ich will das Essen nach Hause bekommen.",
+      "Ich will das Essen wo holen."
     ]
   },
   "slots": [
     {
       "id": "Hzzz6KyjhCpgruzrW9uRl",
-      "name": "bestellGerichtSlot",
+      "name": "gerichtSlot",
       "entities": [
         "gericht"
       ],

@@ -6,13 +6,13 @@
     {
       "name": "vegetarisch",
       "synonyms": [
-        "ohne tierische Produkte"
+        "ohne Fleisch"
       ]
     },
     {
       "name": "vegan",
       "synonyms": [
-        "ohne Fleisch"
+        "ohne tierische Produkte"
       ]
     },
     {
@@ -22,6 +22,30 @@
     {
       "name": "lactosefrei",
       "synonyms": []
+    },
+    {
+      "name": "saisonal",
+      "synonyms": [
+        "frisch"
+      ]
+    },
+    {
+      "name": "regional",
+      "synonyms": [
+        "aus der Region"
+      ]
+    },
+    {
+      "name": "gesund",
+      "synonyms": [
+        "frisch"
+      ]
+    },
+    {
+      "name": "schnell",
+      "synonyms": [
+        "nicht lange warten"
+      ]
     }
   ],
   "fuzzy": 0.8,

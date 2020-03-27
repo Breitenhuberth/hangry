@@ -18,7 +18,7 @@
       "onEnter": [
         "say #!builtin_text-tvi3Gu"
       ],
-      "onReceive": null,
+      "onReceive": [],
       "type": "standard"
     },
     {

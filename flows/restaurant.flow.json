@@ -11,7 +11,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Restaurant-copy"
+          "node": "Restaurant"
         }
       ]
     },
@@ -21,7 +21,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Restaurant-copy"
+          "node": "Restaurant"
         }
       ],
       "onEnter": [
@@ -79,15 +79,15 @@
     },
     {
       "id": "9f458476b0",
-      "name": "Restaurantart-copy",
+      "name": "Restaurantart",
       "next": [
         {
           "condition": "temp.resStyle",
-          "node": "Entscheidung-copy"
+          "node": "Entscheidung"
         },
         {
           "condition": "temp.resGericht",
-          "node": "Entscheidung-copy"
+          "node": "Entscheidung"
         },
         {
           "condition": "true",
@@ -100,16 +100,16 @@
     },
     {
       "id": "0dea78c571",
-      "name": "Restaurant-copy",
+      "name": "Restaurant",
       "next": [
         {
           "condition": "true",
-          "node": "Restaurantart-copy"
+          "node": "Restaurantart"
         }
       ],
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"resStyle\",\"value\":\"{{event.nlu.slots.resStyleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resGericht\",\"value\":\"{{event.nlu.slots.resGerichtSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}",
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"resCity\",\"value\":\"{{event.nlu.slots.resCitySlot.value}}\"}"
       ],
       "onReceive": null,
@@ -119,7 +119,7 @@
       "id": "9923e8abe8",
       "type": "skill-call",
       "skill": "choice",
-      "name": "Entscheidung-copy",
+      "name": "Entscheidung",
       "flow": "skills/choice-41ff0a.flow.json",
       "next": [
         {
@@ -157,7 +157,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Entscheidung-copy"
+          "node": "Entscheidung"
         }
       ],
       "onEnter": [

@@ -14,7 +14,7 @@
       ],
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.rezGerichtSlot.value}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -43,7 +43,7 @@
       "onEnter": [
         "say #!builtin_text-f7lV3F"
       ],
-      "onReceive": null,
+      "onReceive": [],
       "type": "standard"
     },
     {
