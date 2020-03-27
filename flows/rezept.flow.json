@@ -35,11 +35,11 @@
       "name": "Rezept",
       "next": [
         {
-          "condition": "temp.rezeptStyle",
+          "condition": "temp.style",
           "node": "zusatz.flow.json"
         },
         {
-          "condition": "temp.rezeptGericht",
+          "condition": "temp.gericht",
           "node": "zusatz.flow.json"
         },
         {
@@ -56,11 +56,11 @@
       "name": "Rezept-copy",
       "next": [
         {
-          "condition": "temp.rezeptStyle",
+          "condition": "temp.style",
           "node": "zusatz.flow.json"
         },
         {
-          "condition": "temp.rezeptGericht",
+          "condition": "temp.gericht",
           "node": "zusatz.flow.json"
         },
         {
@@ -69,8 +69,8 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
       ],
       "onReceive": null,
       "type": "standard"

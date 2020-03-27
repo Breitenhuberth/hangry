@@ -94,11 +94,11 @@
       "choices$de": [
         {
           "title": "Ja, danke!",
-          "value": "ja_danke"
+          "value": "ja"
         },
         {
           "title": "Nein, darauf habe ich keine Lust.",
-          "value": "nein_danke"
+          "value": "nein"
         }
       ],
       "typing$de": true,
@@ -107,7 +107,7 @@
     },
     "createdBy": "admin",
     "createdOn": "2020-03-14T22:43:11.463Z",
-    "modifiedOn": "2020-03-15T14:41:47.609Z"
+    "modifiedOn": "2020-03-27T17:20:35.069Z"
   },
   {
     "id": "builtin_single-choice-bvtDS2",

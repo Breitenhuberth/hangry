@@ -9,7 +9,9 @@
       "Ich möchte [vegan](styleSlot) essen.",
       "Es sollte [ohne Fleisch](styleSlot) sein.",
       "Ich will [kein Fleisch](styleSlot).",
-      "Es sollte [sehr scharf](styleSlot) sein"
+      "Es sollte [sehr scharf](styleSlot) sein.",
+      "Ich möchte etwas [billiges](styleSlot).",
+      "Es sollte [glutenfrei](styleSlot) sein."
     ]
   },
   "slots": [
@@ -17,7 +19,8 @@
       "id": "TeVH3o1q3eVmqTwnP8maa",
       "name": "styleSlot",
       "entities": [
-        "style"
+        "style",
+        "preis"
       ],
       "color": 1
     }

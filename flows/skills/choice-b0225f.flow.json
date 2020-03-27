@@ -9,12 +9,12 @@
     "contentId": "builtin_single-choice-SKCh2q",
     "invalidContentId": "",
     "keywords": {
-      "ja_danke": [
-        "ja_danke",
+      "ja": [
+        "ja",
         "Ja, danke!"
       ],
-      "nein_danke": [
-        "nein_danke",
+      "nein": [
+        "nein",
         "Nein, darauf habe ich keine Lust."
       ]
     },
@@ -35,12 +35,12 @@
           "node": "parse"
         }
       ],
-      "id": "117184"
+      "id": "281772"
     },
     {
       "name": "parse",
       "onReceive": [
-        "basic-skills/choice_parse_answer {\"randomId\":\"14ieabg0pe\",\"contentId\":\"builtin_single-choice-SKCh2q\",\"invalidContentId\":\"\",\"keywords\":{\"ja_danke\":[\"ja_danke\",\"Ja, danke!\"],\"nein_danke\":[\"nein_danke\",\"Nein, darauf habe ich keine Lust.\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false}}"
+        "basic-skills/choice_parse_answer {\"randomId\":\"14ieabg0pe\",\"contentId\":\"builtin_single-choice-SKCh2q\",\"invalidContentId\":\"\",\"keywords\":{\"ja\":[\"ja\",\"Ja, danke!\"],\"nein\":[\"nein\",\"Nein, darauf habe ich keine Lust.\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false}}"
       ],
       "next": [
         {
@@ -53,7 +53,7 @@
         }
       ],
       "onEnter": [],
-      "id": "123796"
+      "id": "279670"
     },
     {
       "name": "invalid",
@@ -70,7 +70,7 @@
           "node": "sorry"
         }
       ],
-      "id": "924350"
+      "id": "870781"
     },
     {
       "name": "sorry",
@@ -81,7 +81,7 @@
           "node": "parse"
         }
       ],
-      "id": "496942"
+      "id": "007352"
     }
   ]
 }

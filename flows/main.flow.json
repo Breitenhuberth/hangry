@@ -110,25 +110,9 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "b5fffce344",
-      "name": "Restaurant-copy",
-      "next": [
-        {
-          "condition": "true",
-          "node": ""
-        }
-      ],
-      "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resStyle\",\"value\":\"{{event.nlu.slots.resStyleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resCity\",\"value\":\"{{event.nlu.slots.resCitySlot.value}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.nlu.slots.citySlot.value}}\"}"
       ],
       "onReceive": null,
       "type": "standard"

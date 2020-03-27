@@ -171,36 +171,6 @@
       ]
     },
     {
-      "source": "skill-b0225f",
-      "sourcePort": "out0",
-      "target": "68b98fce1f",
-      "points": [
-        {
-          "x": 936,
-          "y": 458
-        },
-        {
-          "x": 1205,
-          "y": 128
-        }
-      ]
-    },
-    {
-      "source": "skill-b0225f",
-      "sourcePort": "out1",
-      "target": "skill-c2f013",
-      "points": [
-        {
-          "x": 936,
-          "y": 484
-        },
-        {
-          "x": 1450,
-          "y": 378
-        }
-      ]
-    },
-    {
       "source": "skill-c2f013",
       "sourcePort": "out1",
       "target": "05b529155e",

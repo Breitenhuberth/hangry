@@ -36,14 +36,14 @@
       "flow": "skills/choice-b0225f.flow.json",
       "next": [
         {
-          "caption": "User picked [ja_danke]",
-          "condition": "temp['skill-choice-ret-14ieabg0pe'] == \"ja_danke\"",
-          "node": "node-a06e"
+          "caption": "User picked [ja]",
+          "condition": "temp['skill-choice-ret-14ieabg0pe'] == \"ja\"",
+          "node": ""
         },
         {
-          "caption": "User picked [nein_da...]",
-          "condition": "temp['skill-choice-ret-14ieabg0pe'] == \"nein_danke\"",
-          "node": "choice-c2f013"
+          "caption": "User picked [nein]",
+          "condition": "temp['skill-choice-ret-14ieabg0pe'] == \"nein\"",
+          "node": ""
         },
         {
           "caption": "On failure",

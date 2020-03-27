@@ -24,13 +24,17 @@
       "Welches Restaurant liefert in meiner Nähe?",
       "Ich würde am liebsten Essen bestellen.",
       "Ich würde gerne [Pizza](gerichtSlot) bestellen.",
-      "Wo kann ich [vegetarisches](bestellStyleSlot) Essen bestellen?",
-      "Ich würde gerne in [Leipzig](bestellCitySlot) [vietnamesisch](bestellStyleSlot) bestellen.",
-      "Wo kann ich in [Berlin](bestellCitySlot) [Sandwiches](gerichtSlot) bestellen.",
+      "Wo kann ich [vegetarisches](styleSlot) Essen bestellen?",
+      "Ich würde gerne in [Leipzig](citySlot) [vietnamesisch](styleSlot) bestellen.",
+      "Wo kann ich in [Berlin](citySlot) [Sandwiches](gerichtSlot) bestellen.",
       "Ich würde gerne bestellen.",
       "Ich will mir das Essen liefern lassen",
       "Ich will das Essen nach Hause bekommen.",
-      "Ich will das Essen wo holen."
+      "Ich will das Essen wo holen.",
+      "Wo kann ich [günstig](styleSlot) Essen bestellen?",
+      "Ich möchte gerne [glutenfreies](styleSlot) Essen liefern lassen.",
+      "Wo kann ich in [Helsinki](citySlot) [preiswertes](styleSlot) Essen bestellen?",
+      "Gibt es einen Lieferdienst mit [veganen](styleSlot) Gerichten in [München](citySlot)?"
     ]
   },
   "slots": [
@@ -44,15 +48,17 @@
     },
     {
       "id": "e-uUHTVA58rUt0PyNPW0C",
-      "name": "bestellStyleSlot",
+      "name": "styleSlot",
       "entities": [
-        "style"
+        "style",
+        "preis",
+        "restaurant"
       ],
       "color": 2
     },
     {
       "id": "TCq701JwjZJRhDk1YGxkr",
-      "name": "bestellCitySlot",
+      "name": "citySlot",
       "entities": [
         "city"
       ],

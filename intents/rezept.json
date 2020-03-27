@@ -28,12 +28,12 @@
       "Ich weiß nicht was ich kochen soll.",
       "Kannst du mir ein Rezept vorschlagen.",
       "Was kann ich heute Abend kochen?",
-      "Hast du ein [veganes](rezStyleSlot) Rezept für mich?",
-      "Ich möchte etwas [Vegetarisches](rezStyleSlot) kochen.",
-      "Was kann ich [ohne Ofen](rezStyleSlot) kochen.",
-      "Gib mir ein [schnelles](rezStyleSlot) Gericht das ich kochen kann.",
-      "Sag mir ein [veganes](rezStyleSlot) Gericht.",
-      "Schlage mir ein [saisonales](rezStyleSlot) Rezept vor.",
+      "Hast du ein [veganes](styleSlot) Rezept für mich?",
+      "Ich möchte etwas [Vegetarisches](styleSlot) kochen.",
+      "Was kann ich [ohne Ofen](styleSlot) kochen.",
+      "Gib mir ein [schnelles](styleSlot) Gericht das ich kochen kann.",
+      "Sag mir ein [veganes](styleSlot) Gericht.",
+      "Schlage mir ein [saisonales](styleSlot) Rezept vor.",
       "Selber kochen.",
       "Hast du ein gutes Rezept für [Nudeln](gerichtSlot).",
       "Ich würde gerne ein [Auflauf](gerichtSlot) machen.",
@@ -43,15 +43,17 @@
       "Ich bin auf der Suche nach einem Rezept.",
       "Ich würde das essen gerne selbst zubereiten.",
       "Ich will etwas backen.",
-      "Ich würde gerne [Lasagne](gerichtSlot) kochen."
+      "Ich würde gerne [Lasagne](gerichtSlot) kochen.",
+      "Ich würde gerne [günstig](styleSlot) kochen."
     ]
   },
   "slots": [
     {
       "id": "qmZJh3Ba9SQ0NFowzYtNb",
-      "name": "rezStyleSlot",
+      "name": "styleSlot",
       "entities": [
-        "style"
+        "style",
+        "preis"
       ],
       "color": 1
     },
