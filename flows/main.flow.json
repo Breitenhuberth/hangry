@@ -12,7 +12,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Richtung"
+          "node": "Intents"
         }
       ],
       "onEnter": [
@@ -27,7 +27,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Richtung"
+          "node": "Intents"
         }
       ],
       "onEnter": [
@@ -36,67 +36,9 @@
       "onReceive": []
     },
     {
-      "id": "skill-b90d15",
-      "type": "skill-call",
-      "skill": "choice",
-      "name": "Entscheidung",
-      "flow": "skills/choice-b90d15.flow.json",
-      "next": [
-        {
-          "caption": "User picked [restaur...]",
-          "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"restaurant\"",
-          "node": "restaurant.flow.json"
-        },
-        {
-          "caption": "User picked [rezept]",
-          "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"rezept\"",
-          "node": "rezept.flow.json"
-        },
-        {
-          "caption": "User picked [bestell...]",
-          "condition": "temp['skill-choice-ret-jjbpj8mvgk'] == \"bestellen\"",
-          "node": "bestellen.flow.json"
-        },
-        {
-          "caption": "On failure",
-          "condition": "true",
-          "node": "Default"
-        }
-      ],
-      "onEnter": null,
-      "onReceive": null
-    },
-    {
-      "id": "f9b51db71a",
-      "name": "Gericht",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Entscheidung"
-        }
-      ],
-      "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
       "id": "e13ab49a4b",
-      "name": "Richtung",
+      "name": "Intents",
       "next": [
-        {
-          "condition": "event.nlu.intent.name === 'nichtsicher'",
-          "node": "Entscheidung"
-        },
-        {
-          "condition": "event.nlu.intent.name === 'gericht'",
-          "node": "Gericht"
-        },
-        {
-          "condition": "event.nlu.intent.name === 'style'",
-          "node": "Style"
-        },
         {
           "condition": "event.nlu.intent.name === 'rezept'",
           "node": "rezept.flow.json"
@@ -111,6 +53,46 @@
         },
         {
           "condition": "true",
+          "node": "Intents_unkonkret"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f9b51db71a",
+      "name": "Richtung",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Intents"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-kv_Ffj"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "2b75308b6a",
+      "name": "Intents_unkonkret",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'nichtsicher'",
+          "node": "Richtung"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'gericht'",
+          "node": "Rezept-copy"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'style'",
+          "node": "Richtung"
+        },
+        {
+          "condition": "true",
           "node": "Default"
         }
       ],
@@ -119,16 +101,34 @@
       "type": "standard"
     },
     {
-      "id": "fa7e5bc16c",
-      "name": "Style",
+      "id": "6ef2d2d3de",
+      "name": "Rezept-copy",
       "next": [
         {
           "condition": "true",
-          "node": "Entscheidung"
+          "node": "Richtung"
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "b5fffce344",
+      "name": "Restaurant-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resStyle\",\"value\":\"{{event.nlu.slots.resStyleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resCity\",\"value\":\"{{event.nlu.slots.resCitySlot.value}}\"}"
       ],
       "onReceive": null,
       "type": "standard"

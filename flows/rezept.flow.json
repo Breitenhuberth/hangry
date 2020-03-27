@@ -4,22 +4,6 @@
   "startNode": "entry",
   "nodes": [
     {
-      "id": "0cb27179f5",
-      "name": "Rezept",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Rezept-copy"
-        }
-      ],
-      "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
       "id": "351bf65e8b",
       "name": "entry",
       "onEnter": [],
@@ -47,61 +31,20 @@
       "type": "standard"
     },
     {
-      "id": "skill-41ff0a",
-      "type": "skill-call",
-      "skill": "choice",
-      "name": "Entscheidung",
-      "flow": "skills/choice-41ff0a.flow.json",
-      "next": [
-        {
-          "caption": "User picked [ja]",
-          "condition": "temp['skill-choice-ret-3n2ig0je44'] == \"ja\"",
-          "node": "Hinzufuegen"
-        },
-        {
-          "caption": "User picked [nein]",
-          "condition": "temp['skill-choice-ret-3n2ig0je44'] == \"nein\"",
-          "node": "suche.flow.json"
-        },
-        {
-          "caption": "On failure",
-          "condition": "true",
-          "node": "Default_Entscheidung"
-        }
-      ],
-      "onEnter": null,
-      "onReceive": null
-    },
-    {
-      "id": "b392ac67b3",
-      "name": "Default_Entscheidung",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Entscheidung"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-p_Lcq7"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "d374cbbf48",
-      "name": "Rezept-copy",
+      "id": "0cb27179f5",
+      "name": "Rezept",
       "next": [
         {
           "condition": "temp.rezeptStyle",
-          "node": "Entscheidung"
+          "node": "zusatz.flow.json"
         },
         {
           "condition": "temp.rezeptGericht",
-          "node": "Entscheidung"
+          "node": "zusatz.flow.json"
         },
         {
           "condition": "true",
-          "node": "node-c278"
+          "node": "Rezept-copy"
         }
       ],
       "onEnter": [],
@@ -109,20 +52,27 @@
       "type": "standard"
     },
     {
-      "id": "bf8abf91ba",
-      "name": "Hinzufuegen",
+      "id": "b266a253a6",
+      "name": "Rezept-copy",
       "next": [
         {
+          "condition": "temp.rezeptStyle",
+          "node": "zusatz.flow.json"
+        },
+        {
+          "condition": "temp.rezeptGericht",
+          "node": "zusatz.flow.json"
+        },
+        {
           "condition": "true",
-          "node": "Entscheidung"
+          "node": "node-c278"
         }
       ],
       "onEnter": [
-        "say #!builtin_text-k1ZV3u"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
       ],
-      "onReceive": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezStyle\",\"value\":\"{{event.payload.text}}\"}"
-      ],
+      "onReceive": null,
       "type": "standard"
     }
   ]
