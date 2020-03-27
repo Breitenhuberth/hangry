@@ -52,7 +52,7 @@
       "name": "node-0981",
       "next": [
         {
-          "condition": "temp.bestellCity",
+          "condition": "temp.city",
           "node": "API_Standort"
         },
         {
@@ -70,7 +70,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "suche.flow.json"
+          "node": "zusatz.flow.json"
         }
       ],
       "onEnter": [

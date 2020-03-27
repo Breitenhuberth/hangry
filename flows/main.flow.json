@@ -81,7 +81,7 @@
       "next": [
         {
           "condition": "event.nlu.intent.name === 'nichtsicher'",
-          "node": "Richtung"
+          "node": "Rezept-copy"
         },
         {
           "condition": "event.nlu.intent.name === 'gericht'",
@@ -89,7 +89,7 @@
         },
         {
           "condition": "event.nlu.intent.name === 'style'",
-          "node": "Richtung"
+          "node": "Rezept-copy"
         },
         {
           "condition": "true",

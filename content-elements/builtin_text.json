@@ -289,5 +289,16 @@
     "createdBy": "admin",
     "createdOn": "2020-03-27T17:11:49.095Z",
     "modifiedOn": "2020-03-27T17:11:49.095Z"
+  },
+  {
+    "id": "builtin_text-Ub9TUY",
+    "formData": {
+      "markdown$de": true,
+      "typing$de": true,
+      "text$de": "*Durchsuche Datenbank*"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-03-27T17:29:30.320Z",
+    "modifiedOn": "2020-03-27T17:29:30.320Z"
   }
 ]

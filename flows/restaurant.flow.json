@@ -11,7 +11,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Restaurantart-copy"
+          "node": "Restaurantart"
         }
       ]
     },
@@ -36,20 +36,18 @@
       "next": [
         {
           "condition": "true",
-          "node": "API_Standort"
+          "node": "City_speichern"
         }
       ],
       "onEnter": [
         "say #!builtin_text-C2G4tG"
       ],
-      "onReceive": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"citySlot\",\"value\":\"{{event.payload.text}}\"}"
-      ],
+      "onReceive": [],
       "type": "standard"
     },
     {
       "id": "8fe2da4250",
-      "name": "node-ef06",
+      "name": "City",
       "next": [
         {
           "condition": "temp.city",
@@ -81,15 +79,15 @@
     },
     {
       "id": "3cdc11b7d8",
-      "name": "Restaurantart-copy",
+      "name": "Restaurantart",
       "next": [
         {
           "condition": "temp.style",
-          "node": "node-ef80"
+          "node": "City_speichern"
         },
         {
           "condition": "temp.gericht",
-          "node": "node-ef80"
+          "node": "City_speichern"
         },
         {
           "condition": "true",
@@ -101,31 +99,16 @@
       "type": "standard"
     },
     {
-      "id": "9e9280cef4",
-      "name": "node-ef80",
-      "next": [
-        {
-          "condition": "true",
-          "node": "node-ef06"
-        }
-      ],
-      "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"resCity\",\"value\":\"{{event.nlu.slots.resCitySlot.value}}\"}"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
       "id": "0dea78c571",
       "name": "Restaurant",
       "next": [
         {
           "condition": "temp.style",
-          "node": "node-ef80"
+          "node": "City_speichern"
         },
         {
           "condition": "temp.gericht",
-          "node": "node-ef80"
+          "node": "City_speichern"
         },
         {
           "condition": "true",
@@ -135,6 +118,21 @@
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}",
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9e9280cef4",
+      "name": "City_speichern",
+      "next": [
+        {
+          "condition": "true",
+          "node": "City"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.nlu.slots.citySlot.value}}\"}"
       ],
       "onReceive": null,
       "type": "standard"
