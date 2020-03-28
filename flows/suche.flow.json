@@ -151,7 +151,9 @@
           "node": "Suche"
         }
       ],
-      "onEnter": [],
+      "onEnter": [
+        "say #!builtin_text-iQWe7x"
+      ],
       "onReceive": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}",
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}"
