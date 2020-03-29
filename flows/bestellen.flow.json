@@ -11,58 +11,9 @@
       "next": [
         {
           "condition": "true",
-          "node": "Bestellart-copy-copy"
+          "node": "Restaurant-copy"
         }
       ]
-    },
-    {
-      "id": "62820198a4",
-      "name": "node-e6ea-copy",
-      "next": [
-        {
-          "condition": "true",
-          "node": "API_Standort"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-C2G4tG"
-      ],
-      "onReceive": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"bestellCity\",\"value\":\"{{event.payload.text}}\"}"
-      ],
-      "type": "standard"
-    },
-    {
-      "id": "d812411fbf",
-      "name": "Essensrichtung",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Bestellen-copy"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-f7lV3F"
-      ],
-      "onReceive": [],
-      "type": "standard"
-    },
-    {
-      "id": "6713b52b30",
-      "name": "node-0981",
-      "next": [
-        {
-          "condition": "temp.city",
-          "node": "API_Standort"
-        },
-        {
-          "condition": "true",
-          "node": "node-e6ea-copy"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": null,
-      "type": "standard"
     },
     {
       "id": "8ad8630f7a",
@@ -80,64 +31,82 @@
       "type": "standard"
     },
     {
-      "id": "67443c860f",
-      "name": "Bestellart-copy-copy",
+      "id": "35ec269be8",
+      "name": "Restaurant-copy",
       "next": [
         {
-          "condition": "temp.gericht",
-          "node": "node-5ed0"
+          "condition": "temp.style",
+          "node": "City_speichern-copy"
         },
         {
-          "condition": "temp.style",
-          "node": "node-5ed0"
+          "condition": "temp.gericht",
+          "node": "City_speichern-copy"
         },
         {
           "condition": "true",
-          "node": "Bestellen-copy"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "72849e12f4",
-      "name": "Bestellen-copy",
-      "next": [
-        {
-          "condition": "temp.gericht",
-          "node": "node-5ed0"
-        },
-        {
-          "condition": "temp.style",
-          "node": "node-5ed0"
-        },
-        {
-          "condition": "true",
-          "node": "Essensrichtung"
+          "node": "Essensrichtung-copy"
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}",
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.nlu.slots.citySlot.value}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
       ],
       "onReceive": null,
       "type": "standard"
     },
     {
-      "id": "9b5ece800b",
-      "name": "node-5ed0",
+      "id": "2926bc4bcd",
+      "name": "Essensrichtung-copy",
       "next": [
         {
           "condition": "true",
-          "node": "node-0981"
+          "node": "Restaurant-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-f7lV3F"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "3fb719b06d",
+      "name": "City_speichern-copy",
+      "next": [
+        {
+          "condition": "temp.city",
+          "node": "API_Standort"
+        },
+        {
+          "condition": "true",
+          "node": "Standortabfrage-copy"
         }
       ],
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.nlu.slots.citySlot.value}}\"}"
       ],
       "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "74c82f2d89",
+      "name": "Standortabfrage-copy",
+      "next": [
+        {
+          "condition": "temp.city",
+          "node": "API_Standort"
+        },
+        {
+          "condition": "true",
+          "node": "City_speichern-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-C2G4tG"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.payload.text}}\"}"
+      ],
       "type": "standard"
     }
   ]

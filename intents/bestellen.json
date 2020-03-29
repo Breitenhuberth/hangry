@@ -34,7 +34,8 @@
       "Wo kann ich [günstig](styleSlot) Essen bestellen?",
       "Ich möchte gerne [glutenfreies](styleSlot) Essen liefern lassen.",
       "Wo kann ich in [Helsinki](citySlot) [preiswertes](styleSlot) Essen bestellen?",
-      "Gibt es einen Lieferdienst mit [veganen](styleSlot) Gerichten in [München](citySlot)?"
+      "Gibt es einen Lieferdienst mit [veganen](styleSlot) Gerichten in [München](citySlot)?",
+      "Ich möchte [Nudeln](gerichtSlot) in [Glasgow](citySlot) bestellen."
     ]
   },
   "slots": [

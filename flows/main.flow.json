@@ -81,15 +81,15 @@
       "next": [
         {
           "condition": "event.nlu.intent.name === 'nichtsicher'",
-          "node": "Rezept-copy"
+          "node": "Entities"
         },
         {
           "condition": "event.nlu.intent.name === 'gericht'",
-          "node": "Rezept-copy"
+          "node": "Entities"
         },
         {
           "condition": "event.nlu.intent.name === 'style'",
-          "node": "Rezept-copy"
+          "node": "Entities"
         },
         {
           "condition": "true",
@@ -102,7 +102,7 @@
     },
     {
       "id": "6ef2d2d3de",
-      "name": "Rezept-copy",
+      "name": "Entities",
       "next": [
         {
           "condition": "true",

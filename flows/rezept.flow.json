@@ -11,28 +11,13 @@
       "next": [
         {
           "condition": "true",
-          "node": "Rezept"
+          "node": "Entities-copy"
         }
       ]
     },
     {
-      "id": "94443423de",
-      "name": "node-c278",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Rezept"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-f7lV3F"
-      ],
-      "onReceive": [],
-      "type": "standard"
-    },
-    {
-      "id": "0cb27179f5",
-      "name": "Rezept",
+      "id": "d3f72cf159",
+      "name": "Entities-copy",
       "next": [
         {
           "condition": "temp.style",
@@ -44,28 +29,7 @@
         },
         {
           "condition": "true",
-          "node": "Rezept-copy"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "b266a253a6",
-      "name": "Rezept-copy",
-      "next": [
-        {
-          "condition": "temp.style",
-          "node": "zusatz.flow.json"
-        },
-        {
-          "condition": "temp.gericht",
-          "node": "zusatz.flow.json"
-        },
-        {
-          "condition": "true",
-          "node": "node-c278"
+          "node": "Essenrichtung-Frage-copy"
         }
       ],
       "onEnter": [
@@ -73,6 +37,21 @@
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
       ],
       "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c429c7855b",
+      "name": "Essenrichtung-Frage-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Entities-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-f7lV3F"
+      ],
+      "onReceive": [],
       "type": "standard"
     }
   ]

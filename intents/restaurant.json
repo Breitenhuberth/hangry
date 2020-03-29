@@ -46,7 +46,8 @@
       "Ich will in [Leipzig](citySlot) essen gehen.",
       "Ich würde gerne in ein Restaurant in [Köln](citySlot) gehen.",
       "Zeig mir Restaurants in [Leipzig](citySlot).",
-      "Ich würde gerne [vegetarisch](styleSlot) essen gehen."
+      "Ich würde gerne [vegetarisch](styleSlot) essen gehen.",
+      "Ich möchte [Nudeln](gerichtSlot) in [Glasgow](citySlot) essen gehen."
     ]
   },
   "slots": [

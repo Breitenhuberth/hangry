@@ -11,56 +11,9 @@
       "next": [
         {
           "condition": "true",
-          "node": "Restaurantart"
-        }
-      ]
-    },
-    {
-      "id": "62a3bead5e",
-      "name": "Restaurant_Frage",
-      "next": [
-        {
-          "condition": "true",
           "node": "Restaurant"
         }
-      ],
-      "onEnter": [
-        "say #!builtin_text-EZhKeE"
-      ],
-      "onReceive": [],
-      "type": "standard"
-    },
-    {
-      "id": "30bdfe6a96",
-      "name": "Standort_Frage",
-      "next": [
-        {
-          "condition": "true",
-          "node": "City_speichern"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-C2G4tG"
-      ],
-      "onReceive": [],
-      "type": "standard"
-    },
-    {
-      "id": "8fe2da4250",
-      "name": "City",
-      "next": [
-        {
-          "condition": "temp.city",
-          "node": "API_Standort"
-        },
-        {
-          "condition": "true",
-          "node": "Standort_Frage"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": null,
-      "type": "standard"
+      ]
     },
     {
       "id": "c667cc0d0f",
@@ -74,27 +27,6 @@
       "onEnter": [
         "say #!builtin_text-lrNt7y"
       ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "3cdc11b7d8",
-      "name": "Restaurantart",
-      "next": [
-        {
-          "condition": "temp.style",
-          "node": "City_speichern"
-        },
-        {
-          "condition": "temp.gericht",
-          "node": "City_speichern"
-        },
-        {
-          "condition": "true",
-          "node": "Restaurant"
-        }
-      ],
-      "onEnter": [],
       "onReceive": null,
       "type": "standard"
     },
@@ -123,18 +55,58 @@
       "type": "standard"
     },
     {
+      "id": "62a3bead5e",
+      "name": "Restaurant_Frage",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Restaurant"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-EZhKeE"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
       "id": "9e9280cef4",
       "name": "City_speichern",
       "next": [
         {
+          "condition": "temp.city",
+          "node": "API_Standort"
+        },
+        {
           "condition": "true",
-          "node": "City"
+          "node": "Standortabfrage"
         }
       ],
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.nlu.slots.citySlot.value}}\"}"
       ],
       "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "4232271b80",
+      "name": "Standortabfrage",
+      "next": [
+        {
+          "condition": "temp.city",
+          "node": "API_Standort"
+        },
+        {
+          "condition": "true",
+          "node": "City_speichern"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-C2G4tG"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.payload.text}}\"}"
+      ],
       "type": "standard"
     }
   ]
