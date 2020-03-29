@@ -1,0 +1,29 @@
+{
+  "name": "city",
+  "utterances": {
+    "de": [
+      "city",
+      "[Berlin](city)",
+      "[Glasgow](city)",
+      "[Leipzig](city)",
+      "[München](city)",
+      "[Tokio](city)",
+      "[Paris](city)",
+      "[Madrid](city)",
+      "[Moskau](city)"
+    ]
+  },
+  "slots": [
+    {
+      "id": "QPi67CDzSl6ADghqdZV_A",
+      "name": "city",
+      "entities": [
+        "city"
+      ],
+      "color": 1
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}

@@ -111,8 +111,7 @@
       ],
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.nlu.slots.styleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.nlu.slots.citySlot.value}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"gericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
       ],
       "onReceive": null,
       "type": "standard"

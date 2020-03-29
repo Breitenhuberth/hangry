@@ -61,17 +61,19 @@
       "name": "Hinzufuegen",
       "next": [
         {
-          "condition": "true",
+          "condition": "temp.style",
           "node": "Entscheidung-copy"
+        },
+        {
+          "condition": "true",
+          "node": "Default_Entscheidung-copy"
         }
       ],
       "onEnter": [
         "say #!builtin_text-k1ZV3u"
       ],
       "onReceive": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezStyle\",\"value\":\"{{event.payload.text}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptStyle\",\"value\":\"{{event.nlu.slots.rezStyleSlot.value}}\"}",
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"rezeptGericht\",\"value\":\"{{event.nlu.slots.gerichtSlot.value}}\"}"
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"style\",\"value\":\"{{event.payload.text}}\"}"
       ],
       "type": "standard"
     }

@@ -11,7 +11,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "Restaurant"
+          "node": "node-5913"
         }
       ]
     },
@@ -93,10 +93,6 @@
       "name": "Standortabfrage",
       "next": [
         {
-          "condition": "temp.city",
-          "node": "API_Standort"
-        },
-        {
           "condition": "true",
           "node": "City_speichern"
         }
@@ -104,9 +100,28 @@
       "onEnter": [
         "say #!builtin_text-C2G4tG"
       ],
-      "onReceive": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"city\",\"value\":\"{{event.payload.text}}\"}"
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "2f5694a445",
+      "name": "node-5913",
+      "next": [
+        {
+          "condition": "temp.gericht",
+          "node": "City_speichern"
+        },
+        {
+          "condition": "temp.style",
+          "node": "City_speichern"
+        },
+        {
+          "condition": "true",
+          "node": "Restaurant"
+        }
       ],
+      "onEnter": [],
+      "onReceive": null,
       "type": "standard"
     }
   ]
